@@ -37,15 +37,19 @@ public class DeletedFiles_StepDefinitions {
         System.out.println("deletedFilesPage.firstFileName.getText() = " + deletedFilesPage.firstFileName.getText());
         System.out.println("deletedFilesPage.lastFileName.getText() = " + deletedFilesPage.lastFileName.getText());
 
-        Assert.assertFalse("First file name", false);
-        
-        String fileList = BrowserUtils.getElementsText(By.xpath("(//tbody[@id='fileList'])[12]")).toString();
-        System.out.println("fileList = " + fileList);
+        List<WebElement> allFiles = Driver.getDriver().findElements(By.xpath("//span[@class='innernametext']"));
+        System.out.println("Size is " + allFiles.size());
+
+        for (WebElement eachFile : allFiles) {
+            System.out.println(eachFile.getText());
+        }
+        Assert.assertEquals("A folder", allFiles.get(1).getText());
+
 
     }
 
     @When("the user clicks the three dots icon next to a deleted file")
-    public void theUserClicksTheThreeDotsIconNextToADeletedFile()  {
+    public void theUserClicksTheThreeDotsIconNextToADeletedFile() {
 
         deletedFilesPage.threeDots.click();
         BrowserUtils.waitForPageToLoad(2);
