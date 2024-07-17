@@ -1,14 +1,13 @@
 package com.symund.pages;
 
 import com.symund.utilities.Driver;
-import io.cucumber.java.zh_cn.假如;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class DeletedFilesPage {
+public class US007_DeletedFilesPage {
 
-    public DeletedFilesPage() {
+    public US007_DeletedFilesPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -21,7 +20,7 @@ public class DeletedFilesPage {
     @FindBy(xpath = "(//span[.='Name'])[12]")
     public WebElement nameTab;
 
-    @FindBy(xpath = "(//span[.='A folder'])[2]")
+    @FindBy(xpath = "(//span[@class='innernametext'])[1]")  ////span[.='A folder'])[2]
     public WebElement firstFileName;
 
     @FindBy(xpath ="//span[.='D file']")

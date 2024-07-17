@@ -1,6 +1,6 @@
 package com.symund.step_definitions;
 
-import com.symund.pages.DeletedFilesPage;
+import com.symund.pages.US007_DeletedFilesPage;
 import com.symund.utilities.BrowserUtils;
 import com.symund.utilities.Driver;
 import io.cucumber.java.en.And;
@@ -12,8 +12,8 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class DeletedFiles_StepDefinitions {
-    DeletedFilesPage deletedFilesPage = new DeletedFilesPage();
+public class US007_DeletedFiles_StepDefinitions {
+    US007_DeletedFilesPage deletedFilesPage = new US007_DeletedFilesPage();
 
     @When("user click on Files tab")
     public void user_click_on_files_tab() {
