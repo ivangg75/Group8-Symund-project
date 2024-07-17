@@ -1,3 +1,4 @@
+
 package com.symund.runners;
 
 import io.cucumber.junit.Cucumber;
@@ -14,9 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/symund/step_definitions",
         dryRun = false,
-        tags = "@user and @B34G8-207",
+        tags = "@B34G8-207",
         publish = true //generating a report with public link
 )
 public class CukesRunner {}
-
-
