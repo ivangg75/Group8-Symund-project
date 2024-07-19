@@ -26,7 +26,7 @@ public class US007_DeletedFilesPage {
     @FindBy(xpath ="//span[.='D file']")
     public WebElement lastFileName;
 
-    @FindBy(xpath = "/html/body/div[3]/div[2]/div[13]/table/tbody/tr[4]/td[2]/a/span[3]/a[2]/span[1]")
+    @FindBy(xpath = "//*[@id=\"fileList\"]/tr[4]/td[2]/a/span[3]/a[2]")
     public WebElement threeDots;
     
     @FindBy(xpath = "(//span[.='Delete permanently'])[2]")

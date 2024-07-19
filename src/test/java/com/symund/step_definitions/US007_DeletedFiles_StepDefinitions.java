@@ -53,7 +53,6 @@ public class US007_DeletedFiles_StepDefinitions {
 
         deletedFilesPage.threeDots.click();
         BrowserUtils.waitForPageToLoad(2);
-
     }
 
     @And("the user selects Delete permanently")
