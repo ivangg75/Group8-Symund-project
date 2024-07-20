@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
-public abstract class US13_ProfileSettingsPage {
+public class US13_ProfileSettingsPage {
 
     @FindBy(xpath = "//*[.='Full name']")
     public WebElement fullNameTitle;
@@ -28,6 +28,9 @@ public abstract class US13_ProfileSettingsPage {
 
     @FindBy(xpath = "//input[@type='tel']")
     public WebElement phoneNumberInputBox;
+
+    @FindBy(xpath = "//a[@href='/index.php/settings/user']")
+    public WebElement profileSettingsLink;
 
     public US13_ProfileSettingsPage() { PageFactory.initElements(Driver.getDriver(), this);}
 }
