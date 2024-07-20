@@ -4,6 +4,7 @@ package com.symund.pages;
 import com.symund.utilities.ConfigurationReader;
 import com.symund.utilities.Driver;
 import com.symund.utilities.Driver;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -25,12 +26,14 @@ public class LoginPage {
     public WebElement submitButton;
 
     public void login(){
+        Driver.getDriver().get("http://qa.symund.com/");
         usernameInput.sendKeys(ConfigurationReader.getProperty("users_username"));
         passwordInput.sendKeys(ConfigurationReader.getProperty("users_password"));
         submitButton.click();
     }
 
     public void loginEmployee(){
+        Driver.getDriver().get("http://qa.symund.com/");
         usernameInput.sendKeys(ConfigurationReader.getProperty("employee_username"));
         passwordInput.sendKeys(ConfigurationReader.getProperty("employee_password"));
         submitButton.click();

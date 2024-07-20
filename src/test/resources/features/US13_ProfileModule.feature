@@ -8,7 +8,7 @@ Scenario: User can see at least following titles inside “Personal Info” unde
 Scenario: Name of the user in the Settings field should be the same with Full Name input box
   Given user is logged in
   When user clicks profile settings
-  Then the text in the "Full name" text box should match the text in the settings field
+  Then the text in the Full name text box should match the text in the settings field
 
   Scenario: User cannot pass any characters except numbers into the "Phone Number" input box.
     Given user is logged in

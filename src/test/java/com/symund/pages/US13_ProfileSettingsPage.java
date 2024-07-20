@@ -17,6 +17,9 @@ public class US13_ProfileSettingsPage {
     @FindBy(xpath = "//*[.='Full name']")
     public WebElement fullNameTitle;
 
+    @FindBy(xpath = "//input[@id='displayname']")
+    public WebElement fullNameTextBox;
+
     @FindBy(xpath = "//*[.='Email']")
     public WebElement emailTitle;
 
