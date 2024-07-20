@@ -1,25 +1,37 @@
 package com.symund.step_definitions;
 
+import com.symund.pages.ProfileSettingsPage;
+import com.symund.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class ProfileSettings_StepDefs {
+
+    ProfileSettingsPage profileSettingsPage = new ProfileSettingsPage();
 
     @Given("user is on the Symund settings page")
     public void user_is_on_the_symund_settings_page() {
 
-
+        Driver.getDriver().get("https://qa.symund.com/index.php/settings/user");
 
     }
 
     @When("user click to user icon from the top right")
     public void user_click_to_user_icon_from_the_top_right() {
 
+        profileSettingsPage.userButton.click();
+
     }
 
     @Then("user should see same full name and username")
     public void user_should_see_same_full_name_and_username() {
+
+        String fullName = profileSettingsPage.fullNameBox.getAttribute("value");
+        String actualUserName = profileSettingsPage.profileName.getText();
+
+        Assert.assertEquals(fullName, actualUserName);
 
     }
 

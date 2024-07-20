@@ -16,7 +16,7 @@ public class ProfileSettingsPage {
     @FindBy(xpath = "//div[@id='expand']")
     public WebElement userButton;
 
-    @FindBy(xpath = "//input[@id='displayname']")
+    @FindBy(xpath = "//input[@value='User12']")
     public WebElement fullNameBox;
 
     @FindBy(xpath = "//input[@id='email']")
