@@ -1,16 +1,23 @@
 package com.symund.step_definitions;
 
 import com.symund.pages.ProfileSettingsPage;
+import com.symund.utilities.BrowserUtils;
 import com.symund.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java.eo.Se;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
 
 public class ProfileSettings_StepDefs {
 
+
     ProfileSettingsPage profileSettingsPage = new ProfileSettingsPage();
+
 
     @Given("user is on the Symund settings page")
     public void user_is_on_the_symund_settings_page() {
@@ -54,13 +61,17 @@ public class ProfileSettings_StepDefs {
     public void user_click_select_language() {
 
     }
+
     @When("user click Italiano")
     public void user_click_italiano() {
+
 
     }
 
     @Then("user verify language is Italiano")
     public void user_verify_language_is_italiano() {
+
+
 
     }
 

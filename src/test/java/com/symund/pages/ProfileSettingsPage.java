@@ -4,6 +4,7 @@ import com.symund.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class ProfileSettingsPage {
 
@@ -33,6 +34,8 @@ public class ProfileSettingsPage {
 
     @FindBy(xpath = "//span[@class='user-status-menu-item__header']")
     public WebElement profileName;
+
+
 
 
 }
