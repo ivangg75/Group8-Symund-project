@@ -13,25 +13,25 @@ public class ProfileSettingsPage {
 
     }
 
-    @FindBy
+    @FindBy(xpath = "//div[@id='expand']")
     public WebElement userButton;
 
-    @FindBy
+    @FindBy(xpath = "//input[@id='displayname']")
     public WebElement fullNameBox;
 
-    @FindBy
+    @FindBy(xpath = "//input[@id='email']")
     public WebElement emailInputBox;
 
-    @FindBy
+    @FindBy(xpath = "//span[@class='icon-checkmark hidden']")
     public  WebElement emailCheckmark;
 
-    @FindBy
-    public WebElement languageSelection;
+    @FindBy(xpath = "//select[@id='languageinput']")
+    public WebElement languageInput;
 
-    @FindBy
+    @FindBy(xpath = "//option[@value='it']")
     public WebElement italianoSelectLanguage;
 
-    @FindBy
+    @FindBy(xpath = "//span[@class='user-status-menu-item__header']")
     public WebElement profileName;
 
 
