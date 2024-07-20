@@ -1,4 +1,4 @@
-@B34G8-207
+@wip
 
 Feature: Default
 
@@ -23,7 +23,7 @@ Feature: Default
 
 		Scenario: User can add any task to the list of completed tasks by clicking on the checkbox near the
 		task name
-		    Given the user is on the NewTaskList webpage we created.
+
 		    When the user navigates to the TaskTest tab section .
 		    And the user navigate by clicking on the Checkbox on the left side of the tab section.
 		    Then the task is under Completed Task list.
@@ -32,7 +32,7 @@ Feature: Default
 
 		Scenario: User can add any task to the list of important tasks by clicking on the star icon on the
 		right side of the task line
-		    Given the user is on the NewTaskList webpage we created.
+		    Given the user is on the CompletedTask webpage.
 		    When the user navigates to the TaskTest tab section .
 		    And the user navigate by clicking on the STAR icon on the right side of the tab section.
 		    Then the task is added to Important section.
