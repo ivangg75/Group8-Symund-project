@@ -1,6 +1,6 @@
 package com.symund.step_definitions;
 
-import com.symund.pages.BasePage;
+
 import com.symund.pages.LoginPage;
 import com.symund.pages.US13_ProfileSettingsPage;
 import com.symund.utilities.Driver;
