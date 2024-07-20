@@ -1,8 +1,6 @@
 package com.symund.pages;
 
 import com.symund.utilities.BrowserUtils;
-import com.symund.utilities.ConfigurationReader;
-import com.symund.utilities.Driver;
 import com.symund.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,6 +18,7 @@ public class DashboardPage {
     @FindBy(xpath = "//ul[@id='appmenu']/li")
     List<WebElement> dashboardTabs;
 
+
     public void clickDashboardTab(String tabName){
         BrowserUtils.waitForVisibility(dashboardTabs.get(1), 5);
         for (WebElement dashboardTab : dashboardTabs) {
@@ -31,4 +30,5 @@ public class DashboardPage {
         }
     }
 
+    
 }
