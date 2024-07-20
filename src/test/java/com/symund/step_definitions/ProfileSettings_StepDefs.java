@@ -6,6 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 
 public class ProfileSettings_StepDefs {
 
@@ -38,10 +39,14 @@ public class ProfileSettings_StepDefs {
     @When("user enter a proper e-mail to Email input box")
     public void user_enter_a_proper_e_mail_to_email_input_box() {
 
+        profileSettingsPage.emailInputBox.sendKeys("shuhratkhojaev2002@gmail.com" + Keys.ENTER);
+
     }
 
     @Then("user verify checmark turns on in the Email input box")
     public void user_verify_checmark_turns_on_in_the_email_input_box() {
+
+        profileSettingsPage.emailCheckmark.isDisplayed();
 
     }
 
