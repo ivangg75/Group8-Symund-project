@@ -29,11 +29,10 @@ public class ProfileSettingsPage {
     @FindBy(xpath = "//select[@id='languageinput']")
     public WebElement languageInput;
 
-    @FindBy(xpath = "//option[@value='it']")
-    public WebElement italianoSelectLanguage;
 
     @FindBy(xpath = "//span[@class='user-status-menu-item__header']")
     public WebElement profileName;
+
 
 
 

@@ -20,7 +20,7 @@ public class ProfileSettings_StepDefs {
 
 
     @Given("user is on the Symund settings page")
-    public void user_is_on_the_symund_settings_page() {
+    public void user_is_on_the_symund_settings_page(){
 
         Driver.getDriver().get("https://qa.symund.com/index.php/settings/user");
 
@@ -57,23 +57,35 @@ public class ProfileSettings_StepDefs {
 
     }
 
+
+
     @When("user click select Language")
     public void user_click_select_language() {
 
     }
 
-    @When("user click Italiano")
-    public void user_click_italiano() {
+    @When("user click {string}")
+    public void user_click(String language) {
 
-
-    }
-
-    @Then("user verify language is Italiano")
-    public void user_verify_language_is_italiano() {
-
-
+        Select selectLanguage = new Select(profileSettingsPage.languageInput);
+        selectLanguage.selectByVisibleText(language);
 
     }
+
+    @Then("user verify language is {string}")
+    public void user_verify_language_is(String language) {
+
+        Select selectLanguage = new Select(profileSettingsPage.languageInput);
+
+        String actualSelectedLanguage  = selectLanguage.getFirstSelectedOption().getText();
+        String expectedSelectLanguage = language;
+
+        Assert.assertTrue(actualSelectedLanguage.contains(expectedSelectLanguage));
+    }
+
+
+
+
 
 
 }
