@@ -20,7 +20,7 @@ public class ActivityPage {
     @FindBy(xpath = "//*[@id=\"container\"]/div[1]/div[2]/div/span")
     public WebElement newestDate;
 
-    @FindBy(id ="no_more_activities")
+    @FindBy(xpath = "//div[@id='no_more_activities']")
     public WebElement noMoreActivities;
 
 

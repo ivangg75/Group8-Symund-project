@@ -23,4 +23,5 @@ Feature: As a user, I should be able to see listed items under the Activity modu
 	@B34G8-224
 	Scenario: User can see "No more events to load" message at the end of the "All Activities" tab
 				When user clicks the activity tab
-				Then user will see no more activities at the bottom of the page
+				And user scrolls down to bottom of page
+				Then user should be able to see message No more events to load

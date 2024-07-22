@@ -3,6 +3,7 @@ package com.symund.step_definitions;
 import com.symund.pages.ActivityPage;
 import com.symund.utilities.BrowserUtils;
 import com.symund.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -39,12 +40,31 @@ public class activityStepDefs {
     }
 
 
-    @Then("user will see no more activities at the bottom of the page")
-    public void userWillSeeNoMoreActivitiesAtTheBottomOfThePage() {
-        BrowserUtils.scrollToElement(activityPage.noMoreActivities);
-        BrowserUtils.verifyElementDisplayed(activityPage.noMoreActivities);
+//    @Then("user will see no more activities at the bottom of the page")
+//    public void userWillSeeNoMoreActivitiesAtTheBottomOfThePage() {
+//        BrowserUtils.scrollToElement(activityPage.noMoreActivities);
+//        BrowserUtils.verifyElementDisplayed(activityPage.noMoreActivities);
+//
+//
+//    }
+    @And("user scrolls down to bottom of page")
+    public void userScrollsDownToBottomOfPage() {
+        Actions actions = new Actions(Driver.getDriver());
+        BrowserUtils.waitFor(3);
+        actions.sendKeys(Keys.END).perform();
+        BrowserUtils.waitFor(2);
+        actions.sendKeys(Keys.PAGE_DOWN);
+        actions.sendKeys(Keys.PAGE_DOWN);
 
 
+
+
+
+    }
+
+    @Then("user should be able to see message No more events to load")
+    public void userShouldBeAbleToSeeMessageNoMoreEventsToLoad() {
+        BrowserUtils.verifyElementDisplayed(By.xpath("//div[@id='no_more_activities']"));
     }
 
 
