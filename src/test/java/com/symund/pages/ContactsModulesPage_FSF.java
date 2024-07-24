@@ -66,4 +66,8 @@ public class ContactsModulesPage_FSF {
     @FindBy(xpath = "//*[contains(text(),'There are no contacts yet')]")
     public WebElement noContactsFound;
 
+//    @FindBy(xpath = "//*[contains(text(),'There are no contacts yet')]")
+//    public WebElement noContactsFound;
+
 }
+
