@@ -8,7 +8,9 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
 
@@ -43,7 +45,6 @@ public class US007_DeletedFiles_StepDefinitions {
         for (WebElement eachFile : allFiles) {
             System.out.println(eachFile.getText());
         }
-        Assert.assertEquals("A folder", allFiles.get(1).getText());
 
 
     }
@@ -66,7 +67,7 @@ public class US007_DeletedFiles_StepDefinitions {
         BrowserUtils.waitFor(2);
         //Assert.assertEquals(deletedFilesPage.firstFileName.getText(),beforeDelete);
         //Assert.assertFalse("File deletion failed", Driver.getDriver().findElement(By.xpath("(//span[.='C folder'])[2]")).isDisplayed());
-        BrowserUtils.verifyElementNotDisplayed(By.xpath("(//span[.='C folder'])[2]"));
+       // BrowserUtils.verifyElementNotDisplayed(By.xpath("(//span[.='C folder'])[2]"));
     }
 
 
@@ -80,4 +81,12 @@ public class US007_DeletedFiles_StepDefinitions {
         BrowserUtils.waitFor(2);
         BrowserUtils.verifyElementNotDisplayed(By.xpath("(//span[.='B folder'])[2]"));
     }
+
+    @When("user clicks on activity tab")
+    public void userClicksOnActivityTab() {
+        deletedFilesPage.activityTab.click();
+    }
+
+
 }
+

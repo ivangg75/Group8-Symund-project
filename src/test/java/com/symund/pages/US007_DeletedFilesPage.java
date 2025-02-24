@@ -20,13 +20,13 @@ public class US007_DeletedFilesPage {
     @FindBy(xpath = "(//span[.='Name'])[12]")
     public WebElement nameTab;
 
-    @FindBy(xpath = "(//span[@class='innernametext'])[1]")  ////span[.='A folder'])[2]
+    @FindBy(xpath = "//*[@id=\"fileList\"]/tr[1]/td[2]/a/span[1]/span[1]" )
     public WebElement firstFileName;
 
-    @FindBy(xpath ="//span[.='D file']")
+    @FindBy(xpath ="(//div[@class='thumbnail'])[1]")
     public WebElement lastFileName;
 
-    @FindBy(xpath = "//*[@id=\"fileList\"]/tr[4]/td[2]/a/span[3]/a[2]")
+    @FindBy(xpath = "//*[@id=\"fileList\"]/tr[1]/td[2]/a/span[2]/a[2]/span[1]")
     public WebElement threeDots;
     
     @FindBy(xpath = "(//span[.='Delete permanently'])[2]")
@@ -34,6 +34,12 @@ public class US007_DeletedFilesPage {
 
     @FindBy(xpath = "(//a[@class='action action-restore permanent'])[3]")
     public WebElement restoreButton;
+
+    @FindBy(xpath = "//*[@id=\"appmenu\"]/li[4]")
+   public WebElement activityTab;
+
+   // @FindBy(xpath = "//div[@id='no_more_activities']")
+   // public WebElement bottomPage;
 
 
 
