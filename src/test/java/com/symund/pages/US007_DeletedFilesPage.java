@@ -20,7 +20,7 @@ public class US007_DeletedFilesPage {
     @FindBy(xpath = "(//span[.='Name'])[12]")
     public WebElement nameTab;
 
-    @FindBy(xpath = "//*[@id=\"fileList\"]/tr[1]/td[2]/a/span[1]/span[1]" )
+    @FindBy(xpath = "//span[contains(@class, 'nametext')]//span[@class='innernametext']" )
     public WebElement firstFileName;
 
     @FindBy(xpath ="(//div[@class='thumbnail'])[1]")
